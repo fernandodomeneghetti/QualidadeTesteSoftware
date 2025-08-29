@@ -1,0 +1,22 @@
+    version: '3.8'
+    services:
+      k6:
+        image: grafana/k6:latest
+        # volumes:
+        #   - ./tests:/tests # Mount your k6 test scripts into the container
+        # command: run /tests/primeiro-teste.js # Specify your k6 test script
+      influxdb:
+        image: influxdb:1.8
+        ports:
+          - "8086:8086"
+        volumes:
+          - influxdb_data:/var/lib/influxdb
+      grafana:
+        image: grafana/grafana
+        ports:
+          - "3000:3000"
+        volumes:
+          - grafana_data:/var/lib/grafana
+    volumes:
+      influxdb_data:
+      grafana_data:
