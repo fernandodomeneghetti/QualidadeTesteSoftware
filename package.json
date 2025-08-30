@@ -1,0 +1,21 @@
+{
+  "name": "qualidade-teste-software",
+  "version": "1.0.0",
+  "description": "Website for Faculdade Tech with Cypress testing",
+  "main": "index.js",
+  "scripts": {
+    "start": "http-server . -p 3000 -c-1",
+    "test": "cypress run",
+    "test:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cypress:open": "cypress open"
+  },
+  "keywords": ["testing", "cypress", "ci", "web"],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "cypress": "^13.0.0",
+    "http-server": "^14.1.1",
+    "wait-on": "^7.0.1"
+  }
+}
